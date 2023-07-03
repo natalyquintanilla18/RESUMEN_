@@ -1,0 +1,143 @@
+---
+title: "Resumen"
+author: "Nataly Quintanilla_Maria Isabel Chuya"
+format: html
+editor: visual
+---
+
+![](images/figura1.png)
+
+### 1.1. Introducción
+
+E L ser humano posee grandes habilidades para comunicar su experiencia empleando reglas lingüísticas vagas. Por ejemplo, un famoso cocinero de televisión podría dar instrucciones para tostar pan como: 1. Cortar dos rebanadas de pan medianas. 2. Poner el horno a temperatura alta. 3. Tostar el pan hasta que quede de color ligeramente marrón. El uso de esos términos lingüísticos en cursiva podrían ser seguidos sin problema por un humano, que es capaz de interpretar estas instrucciones rápidamente. La lógica convencional no es adecuada para procesar este tipo de reglas. Por ejemplo, si pasáramos un día con Tiger Woods para aprender a jugar al golf, al final de la jornada podríamos tener un montón de reglas del tipo:
+
+Es una lógica multivaluada que permite representar matemáticamente la incertidumbre y la vaguedad, proporcionando herramientas formales para su tratamiento.
+
+Básicamente, cualquier problema del mundo puede resolverse como dado un conjunto de variables de entrada, obtener un valor adecuado de variables de salida. La lógica difusa permite establecer este mapeo de una forma adecuada, atendiendo a criterios de significado (y no de precisión). \### 1.2. ¿Qué es la Lógica Difusa? Básicamente, cualquier problema del mundo puede resolverse como dado un conjunto de variables de entrada (espacio de entrada), obtener un valor adecuado de variables de salida (espacio de salida). La lógica difusa permite establecer este mapeo de una forma adecuada, atendiendo a criterios de significado (y no de precisión). Le término Lógica Difusa fue utilizado por primera vez en 1974. Actualmente se utiliza en un amplio sentido, agrupando la teoría de conjunto difusos, reglas si-entonces, aritmética difusa, cuantificadores, etc. En este curso emplearemos este significado extenso el término.
+
+### 1.2.1. Diferencias con Probabilidad
+
+Los conceptos empleados en Lógica Difusa y Probabilidad están realacionados en cierto modo, pero son totalmente diferentes. De forma resumida, la probabilidad representa información sobre frecuencia de ocurrencias relativas de un evento bien definido sobre el total de eventos posible. Por su parte, el grado de pertenencia difuso representa las similitudes de un evento con respecto a otro evento, donde las propiedades de esos eventos no están definidas de forma precisa. Veamos un ejemplo, un superviviente de un accidente de avión se encuentra en medio del desierto. Hace dos días que está caminando sin agua en busca de algún poblado cercano donde puedan socorrerle. De repente encuentra dos botellas de líquido, etiquetadas como se muestra en la figura 1.2.
+
+![](images/fig%202.png){fig-align="center"}
+
+La botella A indica que el líquido que contiene es bastante similar y probabilista etiquetadas. a otros que son potables. Naturalmente este valor numérico depende de la función de pertenencia asociada al concepto de "líquido potable". Supongamos que la función de pertenencia asocia 1 al agua pura, por lo que un valor de 0.8 indicaría que la botella A contiene agua no totalmente pura, pero todavía potable (o al menos no es un veneno, o algún líquido perjudicial para el organismo). La probabilidad asociada a la botella B indica que, tras realizar un alto número de experimentos, el contenido de la botella B es potable el 80 % de las veces. Pero, ¿qué ocurre el otro 20 % de las veces?. En estas ocasiones, el líquido no era potable y, por tanto, hay un 20 % de probabilidad de que mueras bebiendo el líquido de esa botella porque contenga amoniaco en lugar de agua. ¿Qué debería elegir el superviviente si las botellas estuvieran etiquetadas con valores de 0.5 fuzzy y 0.5 de probabilidad? En este caso debería rechazar A porque un grado de pertenencia de 0.5 indicaría que el contenido de la botella no es muy parecido a los líquidos potables en ese dominio de conocimiento. La botella B tendría 0.5 de probabilidad de ser potable (también es incertidumbre total), pero tendría un 50 % de probabilidad de que el líquido fuera potable, por lo que debería jugársela y elegir la botella B.
+
+### Características
+
+El Principio de Incompatibilidad dice que la descripción del comportamiento de un sistema complejo no puede realizarse de forma absolutamente precisa.
+
+-   *Representación de la información imprecisa:* Se emplea la Teoría de conjuntos difusos. Se describen los sistemas complejos en sus relaciones entrada-salida mediante proposiciones condicionales (Si-Entonces) de manera que las variables de entrada y salida quedan ligadas.
+
+-   *Inferencia sobre información imprecisa:* Introduce la Regla Composicional de Inferencia para combinar la información y obtener nuevos hechos.
+
+Se pueden describir las principales características esenciales de la lógica difusa y los sistemas difusos:
+
+1.  Se puede formular el conocimiento humano de una forma sistemática, y puede incluise en sistemas de ingeniería.
+2.  El conocimiento se interpreta como restricciones difusas sobre variables. Los sistemas difusos sirven para la definición de sistemas cuyo modelo exacto es difícil de obtener.
+3.  La inferencia puede verse como un proceso de propagación de estas restricciones difusas.
+4.  Se utiliza en sistemas de ayuda a la decisión, permite obtener decisiones con valores incompletos (incierto).
+
+Los sistemas difusos son recomendados en problemas complejos donde no existe un modelo matemático simple asociado y en procesos de comportamiento no lineal.
+
+### Aplicaciones
+
+El uso de conocimiento experto permite la automatización de tareas. Los sistemas basados en lógica difusa son fáciles de diseñar, modificar y mantener. Pese a la pérdida de precisión, la reducción de tiempo de desarrollo y mantenimiento es muy relevante para su uso industrial. Otro factor a tener en cuenta es que el control difuso permite diseñar soluciones de alta calidad que eviten las patentes existentes en otros sistemas de control.
+
+## Conjuntos Difusos
+
+Es una clase en la que hay una progresión gradual desde la pertenencia al conjunto hasta la no pertenencia. Es decir, es un conjunto con límites difusos. En la teoría clásica de conjuntos crisp se define como:
+
+![](images/Screenshot%20from%202023-07-02%2011-59-28.png){fig-align="center" width="113"}
+
+### Operaciones
+
+Las tres operaciones básicas pueden generalizarse de varias formas en conjuntos difusos. Cuando se restringe el rango de pertenencia al conjunto \[0, 1\], estas operaciones "estándar" se comportan de igual modo que las operaciones sobre conjuntos crisp.
+
+![](images/Screenshot%20from%202023-07-02%2012-03-31.png){fig-align="center" width="123"}
+
+#### Unión
+
+La forma generalizada es T-conorma, debe satisfacer los axiomas ∀a, b, c ∈ \[0, 1\]:
+
+-   Elemento Neutro: ⊥(a, 0) = a
+
+-   Conmutatividad: ⊥(a, b) = ⊥(b, a)
+
+-   Monotonicidad: Si a ≤ c y b ≤ d entonces ⊥(a, b) = ⊥(c, d)
+
+-   Asociatividad: ⊥(⊥(a, b), c) = ⊥(a, ⊥(b, c))
+
+#### Intersección
+
+La forma generalizada se denomina T-norma, satisface los siguientes axiomas ∀a, b, c ∈ \[0, 1\]
+
+-   Elemento unidad: T (a, 1) = a
+
+-   Conmutatividad: T (a, b) = T (b, a)
+
+-   Monotonicidad: Si a ≤ c y b ≤ d entonces T (a, b) = T (c, d)
+
+-   Asociatividad: T (T (a, b), c) = T (a, T (b, c))
+
+#### Complemento
+
+El complemento A de un conjunto difuso A, se denota por cA; está definido por una función del tipo c : \[0, 1\] → \[0, 1\]. Tiene que satisfacer los siguientes axiomas:
+
+-   Condiciones límite o frontera: c(0) = 1 y c(1) = 0.
+
+-   Monotonicidad: ∀a, b ∈ \[0, 1\] si a \< b entonces c(a) ≥ c(b).
+
+-   c es una función contínua.
+
+-   c es involutiva ∀a ∈ \[0, 1\] tenemos c(c(a)) = a.
+
+### Propiedades
+
+Los conjuntos Crisp y los difusos tienen las mismas propiedades
+
+-   Conmutativa: A ∩ B = B ∩ A
+
+-   Asociativa: A ∪ (B ∪ C) = (A ∪ B) ∪ C
+
+-   Distributiva: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+
+-   Idempotencia: A ∪ A = A y A ∩ A = A
+
+-   Involución: ¬(¬A) = A
+
+-   Transitiva: If (A ⊂ B) ∩ (B ⊂ C)thenA ⊂ C 1
+
+-   Leyes de Morgan: ¬(A ∩ B) = ¬A ∪ ¬B y ¬(A ∪ B) = ¬A ∩ ¬B \### EJEMPLO
+
+# Instalar y cargar el paquete sets
+
+install.packages("sets")
+
+library(sets)
+
+# Crear conjuntos difusos
+
+calidad \<- fuzzy_set(c("baja", "media", "alta"), c(0, 1, 0)) servicio \<- fuzzy_set(c("malo", "regular", "bueno"), c(0, 1, 0)) propina \<- fuzzy_set(c("baja", "media", "alta"), c(0, 1, 0))
+
+# Definir reglas difusas
+
+reglas \<- fuzzy_rule(list( "IF calidad IS baja AND servicio IS malo THEN propina IS baja", "IF calidad IS media AND servicio IS regular THEN propina IS media", "IF calidad IS alta AND servicio IS bueno THEN propina IS alta" ))
+
+# Evaluar la regla difusa con valores de entrada
+
+entrada \<- fuzzy_eval(list(calidad = 0.4, servicio = 0.6), reglas)
+
+# Obtener el resultado difuso
+
+resultado \<- fuzzy_defuzz(entrada, propina, method = "centroid")
+
+# Imprimir el resultado difuso
+
+print(resultado)
+
+Este es un ejemplo muy simple que muestra cómo crear conjuntos difusos, definir reglas difusas y evaluar una entrada para obtener un resultado difuso utilizando el método del centroide. Sin embargo, ten en cuenta que la implementación y el uso de la lógica difusa pueden variar según el contexto y los requisitos específicos de tu problema. Es posible que necesites ajustar y expandir este ejemplo para adaptarlo a tu caso de uso específico.
+
+NOTA
+
+:   La lógica difusa proporciona un mecanismo de inferencia que permite la simulación de procesos de razonamiento humano en sistemas basados en el conocimiento. La teoría de la lógica difusa proporciona un marco matemático para modelar la incertidumbre en los procesos cognitivos humanos de una manera que puede ser manejada por computadoras.
